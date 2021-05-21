@@ -1,7 +1,6 @@
 import mongoose from "../Database/Database";
 
 export const BooksSchema = new mongoose.Schema({
-  bookId: {},
   name: {
     type: String,
     required: true,
