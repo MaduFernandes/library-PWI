@@ -1,6 +1,6 @@
 import mongoose from "../Database/Database";
 
-export const BookSchema = new mongoose.Schema({
+export const BooksSchema = new mongoose.Schema({
   bookId: {},
   name: {
     type: String,
@@ -24,6 +24,6 @@ export const BookSchema = new mongoose.Schema({
   },
 });
 
-const Book = mongoose.model("Book", BookSchema);
+const Book = mongoose.model("Book", BooksSchema);
 
 export default Book;
