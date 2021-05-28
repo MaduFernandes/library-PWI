@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  margin-left: 280px;
+  margin-top: 100px;
+}
