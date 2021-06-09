@@ -1,17 +1,12 @@
 import React from "react";
 
-import Navbar from "./components/Header/Navbar";
-import Home from "./pages/Home/Home";
-
-import {} from "@material-ui/core";
 import "./styles/App.css";
+import Routes from "./Routes";
 
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
-
-      <Home />
+      <Routes />
     </div>
   );
 };
