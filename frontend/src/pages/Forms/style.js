@@ -18,9 +18,5 @@ export const useStyles = makeStyles((theme) =>
       padding: "0 24px",
       margin: "20px",
     },
-    errors: {
-      color: "red",
-      marginRight: "38%",
-    },
   })
 );

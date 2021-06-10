@@ -7,22 +7,14 @@ import "../../styles/global.css";
 import api from "../../services/api";
 
 import { useFormik } from "formik";
-import * as Yup from "yup";
+
 import CurrencyInput from "react-currency-masked-input";
 
 const BookForms = () => {
   const classes = useStyles();
   const history = useHistory();
 
-  const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
-    author: Yup.string().required("Author is required"),
-    description: Yup.string().required("Description is required"),
-    category: Yup.string().required("Category is required"),
-    price: Yup.number().required("Price is required"),
-  });
-
-  const { handleSubmit, handleChange, values, errors } = useFormik({
+  const { handleSubmit, handleChange, values } = useFormik({
     initialValues: {
       name: "",
       author: "",
@@ -30,7 +22,6 @@ const BookForms = () => {
       category: "",
       price: "",
     },
-    validationSchema,
     onSubmit(values) {
       handleSave(values);
     },
@@ -58,12 +49,8 @@ const BookForms = () => {
           name="name"
           defaultValue={values.name}
           onChange={handleChange}
+          required
         />
-        {errors.name && (
-          <div id="feedback" className={classes.errors}>
-            {errors.name}
-          </div>
-        )}
         <input
           className={classes.input}
           type="text"
@@ -71,12 +58,8 @@ const BookForms = () => {
           name="author"
           defaultValue={values.author}
           onChange={handleChange}
+          required
         />
-        {errors.author && (
-          <div id="feedback" className={classes.errors}>
-            {errors.author}
-          </div>
-        )}
         <input
           className={classes.input}
           type="text"
@@ -84,12 +67,8 @@ const BookForms = () => {
           name="description"
           defaultValue={values.description}
           onChange={handleChange}
+          required
         />
-        {errors.description && (
-          <div id="feedback" className={classes.errors}>
-            {errors.description}
-          </div>
-        )}
         <input
           className={classes.input}
           type="text"
@@ -97,12 +76,8 @@ const BookForms = () => {
           placeholder="Categoria"
           defaultValue={values.category}
           onChange={handleChange}
+          required
         />
-        {errors.category && (
-          <div id="feedback" className={classes.errors}>
-            {errors.category}
-          </div>
-        )}
         <CurrencyInput
           className={classes.input}
           name="price"
@@ -111,11 +86,6 @@ const BookForms = () => {
           onChange={handleChange}
           required
         />
-        {errors.price && (
-          <div id="feedback" className={classes.errors}>
-            {errors.price}
-          </div>
-        )}
         <div>
           <button className={classes.btnCancel} onClick={handleCancel}>
             Voltar
