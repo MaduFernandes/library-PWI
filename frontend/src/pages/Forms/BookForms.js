@@ -2,7 +2,6 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 
 import { useStyles } from "./style";
-import "../../styles/global.css";
 
 import api from "../../services/api";
 
