@@ -2,24 +2,22 @@ import { Request, Response } from "express";
 import Book from "../Models/BooksSchema";
 
 // GET - /books
-export const getAllBooks = (request: Request, response: Response) => {
-  Book.find((error: any, books: any) => {
-    if (error) {
-      response.send(error);
-    } else {
-      response.send(books);
+export const findAll = (request: Request, response: Response) => {
+  const data = Book.find((error: any, books: any) => {
+    if (!data) {
+      return response.status(401).json({ error: "Not found" });
     }
+    response.send(books);
   });
 };
 
 // GET - /book/{id}
-export const getBook = (request: Request, response: Response) => {
+export const findOne = (request: Request, response: Response) => {
   Book.findById(request.params.id, (error: any, books: any) => {
     if (error) {
       response.send(error);
-    } else {
-      response.send(books);
     }
+    response.send(books);
   });
 };
 
@@ -30,21 +28,18 @@ export const saveBook = (request: Request, response: Response) => {
   newBook.save((error: any) => {
     if (error) {
       response.send(error);
-    } else {
-      response.send(newBook);
     }
+    response.send(newBook);
   });
 };
 
 // DELETE - /book/{id}
-export const deleteBook = (request: Request, response: Response) => {
-  Book.deleteOne({ _id: request.params.id }, (error: any) => {
-    if (error) {
-      response.send(error);
-    } else {
-      response.send("Successfully Deleted the Book");
-    }
-  });
+export const deleteBook = async (request: Request, response: Response) => {
+  const bookId = request.params.id;
+
+  await Book.findByIdAndRemove(bookId);
+
+  response.send();
 };
 
 // PUT - /book/{id}
@@ -55,9 +50,8 @@ export const updateBook = (request: Request, response: Response) => {
     (error: any, book: any) => {
       if (error) {
         response.send(error);
-      } else {
-        response.send("Successfully Updated the Book");
       }
+      response.send("Successfully Updated the Book");
     }
   );
 };
