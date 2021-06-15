@@ -2,12 +2,16 @@ import React from "react";
 
 import "./styles/App.css";
 import Routes from "./Routes";
+import Navbar from "./components/Header/Navbar";
 
 const App = () => {
   return (
-    <div className="App">
-      <Routes />
-    </div>
+    <>
+      <Navbar />
+      <div className="App">
+        <Routes />
+      </div>
+    </>
   );
 };
 
