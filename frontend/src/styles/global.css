@@ -5,6 +5,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary: #8259cb;
+  --secondary: #616161;
+
+  --white: #fff;
+  --color-title: #696969;
+
+  --font: bold;
+}
+
 body {
   font: 400 14px Robot, sans-serif;
   background: #f0f0f5;
@@ -16,7 +26,7 @@ button {
   height: 55px;
   border: 0;
   border-radius: 8px;
-  color: #fff;
+  color: var(--white);
   font-weight: 700;
   margin-top: 16px;
   text-align: center;
@@ -25,4 +35,10 @@ button {
   line-height: 50px;
   transition: filter 0.2s;
   margin: 20px;
+}
+
+#btnConfirm:hover {
+  color: var(--primary);
+  background-color: var(--white);
+  border: 2px solid var(--primary);
 }
