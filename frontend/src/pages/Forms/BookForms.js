@@ -52,11 +52,6 @@ const BookForms = () => {
             Livros
           </Typography>
         </div>
-        <div className={classes.divButton}>
-          <button className={classes.btn} type="submit">
-            Cadastrar
-          </button>
-        </div>
       </div>
       <Paper>
         <form className={classes.form} onSubmit={handleSubmit}>
@@ -117,6 +112,11 @@ const BookForms = () => {
             onChange={handleChange}
             required
           />
+          <div className={classes.button}>
+            <button className={classes.btn} type="submit">
+              Cadastrar
+            </button>
+          </div>
         </form>
       </Paper>
     </>
