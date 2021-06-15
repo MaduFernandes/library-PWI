@@ -22,7 +22,7 @@ export const useStyles = makeStyles((theme) =>
       justifyContent: "flex-end",
     },
     root: {
-      background: "#673ab7",
+      background: "var(--primary)",
       height: "55px",
     },
     menu: {
@@ -32,10 +32,10 @@ export const useStyles = makeStyles((theme) =>
       marginRight: "30%",
     },
     title: {
-      color: "#fff",
+      color: "var(--white)",
     },
     menuButton: {
-      color: "#fff",
+      color: "var(--white)",
     },
   })
 );

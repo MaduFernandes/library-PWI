@@ -3,15 +3,12 @@ import { makeStyles, createStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) =>
   createStyles({
     btn: {
-      background: "#8259cb",
-    },
-    btnCancel: {
-      background: "#616161",
+      background: "var(--primary)",
     },
     input: {
       width: "50%",
       height: "55px",
-      backgroundColor: "#fff",
+      backgroundColor: "var(--white)",
       borderRadius: "8px",
       margin: "20px",
     },
@@ -22,7 +19,7 @@ export const useStyles = makeStyles((theme) =>
     },
     typography: {
       alignItems: "left",
-      color: "#696969",
+      color: "var(--color-title)",
     },
     icon: {
       marginBottom: "15px",
@@ -33,11 +30,10 @@ export const useStyles = makeStyles((theme) =>
       justifyContent: "flex-start",
       alignItems: "center",
     },
-    divButton: {
-      minWidth: "85%",
+    button: {
       display: "flex",
-      direction: "row",
-      justifyContent: "flex-end",
+      alignItems: "center",
+      justifyContent: "center",
     },
   })
 );

@@ -11,35 +11,23 @@ const useStyles = makeStyles(() => ({
     width: "500px",
     height: "230px",
   },
-  btn: {
+  btnCancel: {
     width: "25%",
     height: "40px",
     fontWeight: "bold",
     textTransform: "none",
-    border: "2px solid gray",
+  },
+  button: {
+    width: "25%",
+    height: "40px",
+    fontWeight: "var(--font)",
+    backgroundColor: "var(--primary)",
+    textTransform: "none",
   },
   dialogActions: {
     display: "flex",
-    justifyContent: "flex-end",
-    marginBottom: "15px",
-    marginRight: "15px",
-  },
-  pos: {
-    marginBottom: 12,
-  },
-  div: {
-    display: "flex",
-    justifyContent: "space-between",
-  },
-  category: {
-    marginLeft: "10px",
-    color: "var(--white)",
-    fontSize: "14px",
-  },
-  tag: {
-    backgroundColor: "red",
-    width: "83px",
-    borderRadius: "10px",
+    alignItems: "center",
+    justifyContent: "center",
     marginBottom: "15px",
   },
 }));
