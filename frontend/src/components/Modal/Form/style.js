@@ -9,6 +9,10 @@ export const useStyles = makeStyles((theme) =>
       borderRadius: "8px",
       margin: "20px",
     },
+    div: {
+      display: "flex",
+      justifyContent: "flex-end",
+    },
   })
 );
 
