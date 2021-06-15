@@ -10,7 +10,7 @@ const Button = ({ titlePrimary, titleSecondary, save, close }) => {
       <button className={classes.btnCancel} onClick={close}>
         {titleSecondary}
       </button>
-      <button className={classes.btnConfirm} onClick={save}>
+      <button type="submit" className={classes.btnConfirm} onClick={save}>
         {titlePrimary}
       </button>
     </>
