@@ -19,5 +19,6 @@
       "@Controllers/*": ["./src/Controllers/*"],
       "@Models/*": ["./src/Models/*"]
     }
-  }
+  },
+  "include": ["src/**/*"]
 }
