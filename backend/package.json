@@ -9,15 +9,14 @@
     "body-parser": "^1.19.0",
     "concurrently": "^6.1.0",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mongoose": "^5.12.10",
-    "nodemon": "^2.0.7"
+    "express": "^4.17.1"
   },
   "scripts": {
-    "start": "tsc && node dist/App.js",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/App.ts"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.10"
+    "@types/cors": "^2.8.10",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.3.4"
   }
 }
