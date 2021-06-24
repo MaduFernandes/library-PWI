@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import Book from "../Models/BooksSchema";
+import Book from "@Models/BooksSchema";
 
 // GET - /books
 export const findAll = (request: Request, response: Response) => {
