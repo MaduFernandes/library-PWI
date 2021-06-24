@@ -5,17 +5,12 @@
   <a href="https://www.npmjs.com/"><img src="https://img.shields.io/badge/NPM-6.x-red"></a>
 </p>
 
-<p align="center">
-    <a href="https://github.com/gabriel-roque/finDEV"><img src="https://raw.githubusercontent.com/gabriel-roque/design/master/btn-front-end.png" width="200"></a>
-    <a href="https://github.com/gabriel-roque/finDEV-api"><img src="https://raw.githubusercontent.com/gabriel-roque/design/master/btn-back-end.png" width="200"></a>
-</p>
-
 <hr>
 
 ## 📝 Minimal Requirements
 
 - NodeJs 12.x
-- Npm 6.0.x
+- Npm 6.14.x
 
 ## 🚀 Install
 
